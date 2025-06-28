@@ -1,7 +1,7 @@
 
 def is_palindrome(sentence):
   
-  sentence = sentence.lower()
+  sentence = sentence.lower().replace(' ', '').replace('\'', '').replace('.', '')
   
   tmp = [char for char in sentence]
   tmp.reverse()
@@ -12,3 +12,5 @@ def is_palindrome(sentence):
 
 print(is_palindrome('Hello world'))
 print(is_palindrome('Thissiht'))
+print(is_palindrome('hello world'))
+print(is_palindrome("Go hang a salami, I'm a lasagna hog."))
